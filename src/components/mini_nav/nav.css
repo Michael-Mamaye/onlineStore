@@ -1,0 +1,41 @@
+.miniNavWhole
+{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    color: rgb(0,0,0,0.6);
+    width: 60%;
+    justify-content: space-around;
+    overflow-x: hidden;
+   
+}
+.miniNavs
+{
+    margin:5px;
+    padding: 3px;
+    padding-left:10px ;
+    font-weight: bold;
+    font-family: Georgia, Times, serif;
+    border-bottom: 1px solid rgb(0,0,0,0);
+}
+.miniNavs:nth-child(1)
+{
+    border-bottom: 1px solid rgb(0,0,0,0.6);
+}
+.miniNavs:hover
+{
+  cursor: pointer;
+  background-color: 1px solid #ced1ce;
+  border-bottom: 1px solid rgb(0,0,0,0.6);
+}
+@media screen and (max-width:800px) {
+    .miniNavs
+    {padding: 0px;
+        padding-left:0px ;
+    }
+    .miniNavWhole
+    {
+       margin-left: 5%;
+       width:90%
+    }
+}

@@ -1,0 +1,26 @@
+.homeBackground
+{   
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    background: rgb(78,45,1);
+    background: linear-gradient(180deg, 
+            rgba(78,45,1,0.9752275910364145) 0%, 
+            rgba(131,66,12,1) 47%, rgba(166,109,11,1) 100%);
+    opacity: 0.95;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+.bestDeals
+{
+    font-weight: bold;
+    color: #DFE0DF;
+    font-size: 300%;
+}
+@media screen and (max-width:850px) {
+    .bestDeals
+       {
+           margin-top: 100px;
+       }
+}

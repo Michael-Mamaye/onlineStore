@@ -15,11 +15,13 @@ export default makeStyles((theme)=>({
         padding:'10px',
         transform:"TranslateX(0px)",
         transition:'transform 2s',
-       
+        zIndex:'900',
+        overflowX:'hidden'
     },
     wholeNav2:{
         transform:"TranslateY(-100px)",
-        transition:'transform 2s'
+        transition:'transform 2s',
+        overflowX:'hidden'
     },
     appBar:{
         display:'flex',
@@ -80,6 +82,7 @@ export default makeStyles((theme)=>({
     movetop:{
         [theme.breakpoints.down('sm')]:{
             transform:'translate(0px,-180px)',
+            overflowX:'hidden'
         }
     }
     

@@ -1,7 +1,9 @@
 import React,{useState} from 'react'
-import {Button,Input } from '@material-ui/core'
-import Mk from './dinu.jpg'
-const Home=() =>{
+import { Input,Button,Grid } from '@material-ui/core'
+import Mk from '../../../assets/dinu.jpg'
+import './recent.css'
+
+function Recent() {
     const [arrays,setArrays]=useState([
         {pid:1,
          pname:'miki',
@@ -13,22 +15,22 @@ const Home=() =>{
             fname:'mikis',
             images:Mk,
            },
-           {pid:13,
+        {pid:13,
             pname:'miki',
             fname:'mikis',
             images:Mk,
            },
-           {pid:122,
+        {pid:122,
             pname:'miki',
             fname:'mikis',
             images:Mk,
            },
-           {pid:111,
+        {pid:111,
             pname:'miki',
             fname:'mikis',
             images:Mk,
            },
-           {pid:1221,
+        {pid:1221,
             pname:'miki',
             fname:'mikis',
             images:Mk,
@@ -54,14 +56,23 @@ const Home=() =>{
     }
     return (
         <div>
-           {arrays.map(data=>(
-               <li key={data.pid}>{data.pname} is {data.fname}'s child 
-                      <img style={{margin:'100px'}} src={data.images} height='55'width="49"/></li>
-           ))} 
-           <Input type="file" accept="image/*">Choose</Input>
-           <Button onClick={handleClick} color="primary" variant='contained' >this btn</Button>
+            <div className="recentDiv">
+                <p className="recentTitle">Recent Products</p>
+                <Grid container>
+                    {arrays.map(data=>(
+                        <Grid xs={12} sm={6} md={4} lg={3} item key={data.pid}>
+                            <img src={data.images} height='100'width="100"/>
+                            <p className='itemTitle'>{data.pname}</p>
+                            <p className='itemTitle'>{data.fname}</p>
+                        </Grid>
+                    ))} 
+                    <Input type="file" accept="image/*">Choose</Input>
+                    <Button onClick={handleClick} color="primary" variant='contained' >this btn</Button>
+                </Grid>
+
+            </div>
         </div>
     )
 }
 
-export default Home
+export default Recent
