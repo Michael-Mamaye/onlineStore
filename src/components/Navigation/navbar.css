@@ -55,7 +55,7 @@
     position: absolute;
     position: fixed;
     transition: transform 1s;
-    transform: translate(500px,-500px);
+    transform: translate(1000px,-500px);
     z-index: 900;
     overflow-x: hidden;
 }
