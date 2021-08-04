@@ -5,7 +5,7 @@ import MiniNav from '../../mini_nav/Nav'
 import Recent from './homeGrids/Recent'
 import "./home.css"
 import UnderRecent from './homeGrids/UnderRecent'
-
+import List from './homeGrids/List'
 
 const Home=() =>{
     const classes=useStyle()
@@ -18,6 +18,7 @@ const Home=() =>{
            <MiniNav/>
            {/* <Recent/> */}
            <UnderRecent/>
+           <List/>
         </div>
     )
 }

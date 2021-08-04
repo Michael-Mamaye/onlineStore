@@ -1,0 +1,21 @@
+.listDiv
+{
+    margin: 150px;
+    margin-top: 60px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@media screen and (max-width:800px) {
+    .listDiv
+    {
+        margin: 100px;
+    }
+}
+.listSelectTitle
+{
+    margin-top: 60px;
+    text-align: center;
+    margin-left: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    opacity: 0.85;
+}

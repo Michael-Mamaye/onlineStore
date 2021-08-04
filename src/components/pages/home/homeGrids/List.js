@@ -1,12 +1,14 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { Grid,Input,Button, Card, CardMedia, CardContent, CardActions, Dialog } from '@material-ui/core'
-import Mk from '../../assets/dinu.jpg'
-import './catagories.css'
+import Mk from '../../../assets/dinu.jpg'
+import './list.css'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import useStyles from './style'
 
 
 
-function Catagories() {
+function List() {
     const classes=useStyles()
     const [arrays,setArrays]=useState([
         {pid:1,
@@ -43,14 +45,20 @@ function Catagories() {
     const handleClose = () => {
         setOpen(false);
     };
-    
+    useEffect(()=>{ 
+        Aos.init({duration:2000})
+    })
     
     return (
         <div>
-            <div className="catagoriesDiv">
+            <div>
+                <p className="listSelectTitle">Select Your Favorite and Buy</p>
+            </div>
+            <hr style={{opacity:'0.6'}}/>
+            <div className="listDiv">
                 <Grid container spacing={3}>
                         {arrays.map(data=>(
-                            <Grid xs={12} sm={6} md={4} lg={3} item key={data.pid}>
+                            <Grid data-aos='fade-left' lg={12} item key={data.pid}>
                                 <Card style={{display:'flex',flexDirection:'column',justifyContent:'left',width:"90%", height:'400px'}}>
                                     <CardMedia image={data.images} style={{width:"100%", height:'50%'}}></CardMedia>
                                     <CardContent>
@@ -65,17 +73,17 @@ function Catagories() {
                             </Grid>
                         ))} 
                     </Grid>
-                    <p className="catagoriesSeeMore">See more</p>
                     <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
                        <div style={{height:'100px',width:'100px'}}>
                             
                        </div>
                     </Dialog>
             </div>
+            <hr style={{opacity:'0.6'}}/>
         </div>
     )
 }
 
-export default Catagories
+export default List
 
 

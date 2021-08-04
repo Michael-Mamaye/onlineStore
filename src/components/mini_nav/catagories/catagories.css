@@ -4,3 +4,23 @@
     margin-top: 60px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.catagoriesSeeMore
+{
+    text-align: center;
+    margin-top: 50px;
+    background: #DFE0DF;
+    padding: 10px;
+    align-content: center;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 20px;
+    width: 300px;
+    opacity: 0.75;
+    border-radius: 20px;
+}
+.catagoriesSeeMore:hover
+{
+    cursor: pointer;
+    background: #cacaca;
+    border-radius: 20px;
+}
