@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { Input,Button,Grid } from '@material-ui/core'
-import Mk from '../../../assets/dinu.jpg'
+import Mk from '../../../../assets/dinu.jpg'
 import './recent.css'
 
 function Recent() {

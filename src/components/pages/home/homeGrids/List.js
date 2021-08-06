@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { Grid,Input,Button, Card, CardMedia, CardContent, CardActions, Dialog } from '@material-ui/core'
-import Mk from '../../../assets/dinu.jpg'
+import Mk from '../../../../assets/dinu.jpg'
 import './list.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -48,7 +48,10 @@ function List() {
     useEffect(()=>{ 
         Aos.init({duration:2000})
     })
-    
+    const [arr2,setArr2]=useState(arrays)
+    const handleSeeMore=()=>{
+        setArrays(arrays.concat(arr2));
+    }
     return (
         <div>
             <div>
@@ -73,6 +76,7 @@ function List() {
                             </Grid>
                         ))} 
                     </Grid>
+                    <p onClick={handleSeeMore}className="catagoriesSeeMore">See more</p>
                     <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
                        <div style={{height:'100px',width:'100px'}}>
                             

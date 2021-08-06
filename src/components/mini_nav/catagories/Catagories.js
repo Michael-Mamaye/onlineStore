@@ -1,40 +1,17 @@
 import React,{useState} from 'react'
 import { Grid,Input,Button, Card, CardMedia, CardContent, CardActions, Dialog } from '@material-ui/core'
-import Mk from '../../assets/dinu.jpg'
+import Mk from '../../../assets/dinu.jpg'
 import './catagories.css'
 import useStyles from './style'
-
-
+import UniqueId from 'react-html-id'
+import {useSelector,useDispatch} from 'react-redux'
+import newPost from '../../../actions'
 
 function Catagories() {
+   const posts = useSelector(state => state.posts)
+   const dispatch = useDispatch();
     const classes=useStyles()
-    const [arrays,setArrays]=useState([
-        {pid:1,
-         pname:'Samsung',
-         fname:'S21 ultra',
-         description:'lorem ipsum capcha test is nothing it just makes u bored',
-         images:Mk,
-        },
-        {pid:12,
-            pname:'miki',
-            fname:'mikis',
-            description:'lorem ipsum capcha test is nothing it just makes u bored',
-            images:Mk,
-           },
-        {pid:2,
-            pname:'afski',
-            fname:'asdis',
-            description:'lorem ipsum capcha test is nothing it just makes u bored',
-            images:Mk,
-           }, 
-        {pid:3,
-            pname:'adfsadsf',
-            fname:'mafadsfdfsakis',
-            description:'lorem ipsum capcha test is nothing it just makes u bored',
-            images:Mk,
-           }
-        
-    ])
+    
     const [open, setOpen] = React.useState(false);
     
     const handleClickOpen = () => {
@@ -43,14 +20,14 @@ function Catagories() {
     const handleClose = () => {
         setOpen(false);
     };
-    
+  
     
     return (
         <div>
             <div className="catagoriesDiv">
                 <Grid container spacing={3}>
-                        {arrays.map(data=>(
-                            <Grid xs={12} sm={6} md={4} lg={3} item key={data.pid}>
+                        {posts.map(data=>(
+                            <Grid xs={12} sm={6} md={4} lg={3} item>
                                 <Card style={{display:'flex',flexDirection:'column',justifyContent:'left',width:"90%", height:'400px'}}>
                                     <CardMedia image={data.images} style={{width:"100%", height:'50%'}}></CardMedia>
                                     <CardContent>
@@ -65,13 +42,15 @@ function Catagories() {
                             </Grid>
                         ))} 
                     </Grid>
-                    <p className="catagoriesSeeMore">See more</p>
+                    <p onClick={dispatch(newPost)}className="catagoriesSeeMore">See more</p>
                     <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
                        <div style={{height:'100px',width:'100px'}}>
                             
                        </div>
                     </Dialog>
             </div>
+
+            
         </div>
     )
 }

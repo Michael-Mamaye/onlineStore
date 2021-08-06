@@ -2,11 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {Provider} from 'react-redux'
+import {createStore} from 'redux'
+import allReducers from './reducers'
+import Thunk from 'redux-thunk'
+import { applyMiddleware} from "redux";
+import { composeWithDevTools } from 'redux-devtools-extension';
+
+const store=createStore(allReducers,composeWithDevTools(applyMiddleware(Thunk)));
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
