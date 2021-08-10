@@ -1,0 +1,24 @@
+.contactDiv
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+.contactForm
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;  
+    background-color: aqua;
+}
+.contactInputs
+{
+    margin: 3px;
+    padding: 4px;
+    outline: none;
+    height: 30px;
+    width: 200px;
+}
+

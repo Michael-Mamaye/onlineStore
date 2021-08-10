@@ -1,0 +1,23 @@
+.icons
+{
+    color: #DFE0DF;
+    margin: 10px;
+}
+.icons:hover{
+    color: rgb(80, 35, 9);
+    cursor: pointer;
+}
+.allFooter
+{
+    /* background-color: rgb(146, 67, 21,0.6); */
+
+    background: linear-gradient(180deg,rgba(166,109,11,1) 100%, 
+            rgba(131,66,12,1) 17%,rgba(78,45,1,0.9752275910364145) 60%);
+    margin-top: 20px;
+    padding: 100px;
+}
+.footerAbout
+{
+    color: rgb(0,0,0);
+    text-decoration: none;
+}
