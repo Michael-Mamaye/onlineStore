@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start":"node index",
-    "dev":"nodemon index"
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "author": "Mike",
   "license": "MIT",
@@ -13,6 +13,7 @@
     "express-fileupload": "^1.2.1",
     "moment": "^2.29.1",
     "mongoose": "^5.13.5",
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "uuid": "^8.3.2"
   }
 }
