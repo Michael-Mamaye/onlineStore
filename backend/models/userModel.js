@@ -13,6 +13,7 @@ const storeSchema=new mongoose.Schema({
     },
     age:{
         type:Number,
+        require:[true, 'you should have an age'],
         default:null
     },
     title:{
