@@ -3,7 +3,7 @@ import Home from './components/pages/home/Home'
 import Navbar from './components/Navigation/Navbar';
 import './App.css';
 import About from './components/pages/About/About'
-import {BrowserRouter as Router,Switch,Route,Redirect} from 'react-router-dom'
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import Lists from './components/pages/lists/Lists';
 import Contact from './components/pages/contact/Contact';
 import Footer from './components/pages/footer/Footer';

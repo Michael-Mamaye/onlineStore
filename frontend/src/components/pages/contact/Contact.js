@@ -1,5 +1,4 @@
 import React from 'react'
-import Catagories from '../../mini_nav/catagories/Catagories'
 import './contact.css'
 function Contact() {
     return (

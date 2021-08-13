@@ -1,6 +1,6 @@
 
 import React,{useState,useEffect} from 'react'
-import { Grid,Input,Button, Card, CardMedia, CardContent, CardActions, Dialog } from '@material-ui/core'
+import { Grid,Button, Card, CardMedia, CardContent, CardActions, Dialog } from '@material-ui/core'
 import Mk from '../../../../assets/dinu.jpg'
 import './list.css'
 import Aos from 'aos'
@@ -49,7 +49,7 @@ function List() {
     useEffect(()=>{ 
         Aos.init({duration:2000})
     })
-    const [arr2,setArr2]=useState(arrays)
+    const [arr2]=useState(arrays)
     const handleSeeMore=()=>{
         setArrays(arrays.concat(arr2));
     }

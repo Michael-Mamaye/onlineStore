@@ -61,7 +61,7 @@ function Recent() {
                 <Grid container>
                     {arrays.map(data=>(
                         <Grid xs={12} sm={6} md={4} lg={3} item key={data.pid}>
-                            <img src={data.images} height='100'width="100"/>
+                            <img alt={''} src={data.images} height='100'width="100"/>
                             <p className='itemTitle'>{data.pname}</p>
                             <p className='itemTitle'>{data.fname}</p>
                         </Grid>

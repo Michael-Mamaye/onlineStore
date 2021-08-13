@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import Catagories from './catagories/Catagories'
 import './nav.css'
 

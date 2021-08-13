@@ -1,6 +1,23 @@
 const Product =require('./../models/productModel')
 
 
+exports.getTopTen=async (req,res)=>{
+    try{
+        const queryObj={...req.query}
+        const queryStr=JSON.stringify(queryObj)
+        queryStr.replace(/\b(gte|gt|lt|lte)\b/g,match=>`$${match}`)
+
+        // const Topten=await Product.find(JSON.parse(queryStr)).sort({
+        //     item:1
+        // })
+      
+        res.json(Topten)
+    }
+    catch(err){
+        console.log(err)
+    }
+}
+
 exports.getAllProducts= async (req,res)=>{
     try{
 
@@ -15,8 +32,14 @@ exports.getAllProducts= async (req,res)=>{
       
         //the above method adds $ sign infront of the matched item
 
-        let manipulation= await Product.find(JSON.parse(queryStr));
-        
+        let manipulation= await Product.find(JSON.parse(queryStr))
+
+        if(req.query.sort){
+            const sortByKey = req.query.sort.split(',').join(' ');
+            const sortByObj = {};
+            sortByObj[sortByKey] = 1; // <-- using sortBy as the key
+            manipulation = manipulation.sort(sortByObj);
+        }
 
         const product =await manipulation;
 
@@ -25,7 +48,7 @@ exports.getAllProducts= async (req,res)=>{
             product})
 
     }
-    catch(err){
+    catch(err){ 
         res.status(400).json(err)
     }
 }

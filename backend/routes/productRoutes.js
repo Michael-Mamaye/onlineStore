@@ -8,5 +8,4 @@ productRouter.route('/:id')
             .get(productController.getSingleProduct)
             .patch(productController.updateProduct)
             .delete(productController.deleteProduct)
-
 module.exports=productRouter
