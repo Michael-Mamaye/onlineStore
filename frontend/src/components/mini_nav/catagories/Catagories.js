@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { Grid,Button, Card, CardMedia, CardContent, CardActions, Dialog } from '@material-ui/core'
-
+import MK from "../../../assets/dinu.jpg"
 import './catagories.css'
 import useStyles from './style'
 
@@ -34,9 +34,9 @@ const Catagories=()=> {
             <div className="catagoriesDiv">
                 <Grid container spacing={3}>
                         {product.map(data=>(
-                            <Grid xs={12} sm={6} md={4} lg={3} item>
+                            <Grid item key={data._id}xs={12} sm={6} md={4} lg={3}>
                                 <Card style={{display:'flex',flexDirection:'column',justifyContent:'left',width:"90%", height:'400px'}}>
-                                    <CardMedia image={data.images} style={{width:"100%", height:'50%'}}></CardMedia>
+                                    <CardMedia image={MK} style={{width:"100%", height:'50%'}}></CardMedia>
                                     <CardContent>
                                         <p className={classes.contentNames}>{data.name} {data.fname}</p>
                                         <p className={classes.contentDescription}>{data.description}</p>
