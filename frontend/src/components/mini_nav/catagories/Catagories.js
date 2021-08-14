@@ -3,18 +3,23 @@ import { Grid,Button, Card, CardMedia, CardContent, CardActions, Dialog } from '
 import MK from "../../../assets/dinu.jpg"
 import './catagories.css'
 import useStyles from './style'
-
+import { getProduct } from '../../../actions'
 import axios from 'axios'
-
+import { useDispatch,useSelector } from 'react-redux'
 
 const Catagories=()=> {
-    const [product,setproduct]=useState([])
+   const product = useSelector(state => state.productReducer)
+    const dispatch = useDispatch();
+    
 
     useEffect(()=>{
-       axios.get('/products/create').then(res=>{
-           console.log(res.data);
-           setproduct(res.data.product)
-       })
+    //    axios.get('/products/create').then(res=>{
+    //        console.log(res.data);
+    //        setproduct(res.data.product)
+    //    })
+        dispatch(getProduct())
+       
+       console.log(product)
     },[])
   
     const classes=useStyles()
@@ -27,11 +32,15 @@ const Catagories=()=> {
     const handleClose = () => {
         setOpen(false);
     };
-  
+    const handledispatch=()=>{
+        
+    }
     
     return (
         <div>
+
             <div className="catagoriesDiv">
+                <div onClick={handledispatch}>mshadfsdfdsfds</div>
                 <Grid container spacing={3}>
                         {product.map(data=>(
                             <Grid item key={data._id}xs={12} sm={6} md={4} lg={3}>

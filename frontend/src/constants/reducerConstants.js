@@ -1,0 +1,6 @@
+export const LOGGED='LOGGED';
+export const ADDPRODUCT='ADDPRODUCT';
+export const GETPRODUCT='GETPOST';
+export const DELETEPRODUCT='DELETEPRODUCT';
+export const UPDATEPRODUCT='UPDATEPRODUCT';
+export const NOTLOGGED='NOTLOGGED';
