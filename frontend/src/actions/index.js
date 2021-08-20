@@ -19,3 +19,12 @@ export const  getProduct=()=> async (dispatch)=>{
         console.log('get product error',err)
     }
 }
+export const getProductByType=(type)=>async (dispatch)=>{
+    try{
+        const {data}=await axios.get(`/products/create?brand=${type}`)
+        dispatch({type:GETPRODUCT,payload:data.product})
+    }
+    catch(err){
+        console.log('get product error',err)
+    }
+}
