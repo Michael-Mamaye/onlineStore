@@ -1,11 +1,11 @@
-import {ADDPRODUCT,GETPOST,GETPRODUCT,DELETEPRODUCT,UPDATEPRODUCT} from '../../constants/reducerConstants'
+import {ADDPRODUCT,GETPRODUCT,DELETEPRODUCT,UPDATEPRODUCT} from '../../constants/reducerConstants'
  
 const productReducer=(state=[],action)=>{
         switch(action.type)
         {
             case GETPRODUCT:
-                return ([...state,action.payload],
-                    console.log(action.payload))
+                return action.payload;
+                    console.log(action.payload)
 
             case ADDPRODUCT:
                 return action.payload;

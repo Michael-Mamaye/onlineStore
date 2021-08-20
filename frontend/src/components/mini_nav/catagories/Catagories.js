@@ -9,7 +9,8 @@ import { useDispatch,useSelector } from 'react-redux'
 
 const Catagories=()=> {
    const product = useSelector(state => state.productReducer)
-    const dispatch = useDispatch();
+   
+    const dispatch = useDispatch(getProduct());
     
 
     useEffect(()=>{
@@ -19,9 +20,9 @@ const Catagories=()=> {
     //    })
         dispatch(getProduct())
        
-       console.log(product)
+     
     },[])
-  
+    console.log('this is',product)
     const classes=useStyles()
     
     const [open, setOpen] = React.useState(false);
@@ -47,7 +48,7 @@ const Catagories=()=> {
                                 <Card style={{display:'flex',flexDirection:'column',justifyContent:'left',width:"90%", height:'400px'}}>
                                     <CardMedia image={MK} style={{width:"100%", height:'50%'}}></CardMedia>
                                     <CardContent>
-                                        <p className={classes.contentNames}>{data.name} {data.fname}</p>
+                                        <p className={classes.contentNames}>{data.name} </p>
                                         <p className={classes.contentDescription}>{data.description}</p>
                                     </CardContent>
                                     <CardActions className={classes.cardactions}>

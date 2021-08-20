@@ -11,7 +11,7 @@ export const addProduct =(product)=> async (dispatch)=>{
 }
 export const  getProduct=()=> async (dispatch)=>{
     try{
-        const {data} =await axios.get('/products/create')
+        const {data}=await axios.get('/products/create')
         
         dispatch({type:GETPRODUCT,payload:data.product})
     }

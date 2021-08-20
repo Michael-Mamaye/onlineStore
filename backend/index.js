@@ -4,7 +4,9 @@ const app=express();
 const userRouter=require('./routes/userRoutes')
 const productRouter=require('./routes/productRoutes')
 const mongoose=require('mongoose');
+
 const cors=require('cors');
+
 app.use(cors());
 mongoose.connect('mongodb://localhost:27017/onlineStore',
            { useNewUrlParser:true,
@@ -17,6 +19,7 @@ const db=mongoose.connection;
 db.once('open',()=>{console.log("successfully connected")})
 
 app.use(express.json())
+
 app.use(express.urlencoded({extended:false}))
 
 app.use('/users/create',userRouter);
