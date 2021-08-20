@@ -16,8 +16,7 @@ export default makeStyles ((theme)=>({
         display:'flex',
         flexDirection:'column',
         color:'white',
-       
-        
+
     },
     adminMenus:{
         paddingTop:'20px',
@@ -35,6 +34,10 @@ export default makeStyles ((theme)=>({
             cursor:'pointer',
             backgroundColor:'rgba(131,66,12,1) '
         }
+    },
+    links:{
+        textDecoration:'none',
+        color:'white'
     } 
 
 

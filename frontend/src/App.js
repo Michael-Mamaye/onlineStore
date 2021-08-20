@@ -25,12 +25,7 @@ function App() {
                   <About/>
                   <Footer/>
               </Route>
-              <Route exact path="/list" >
-                  <Navbar/>
-                  {/* <Lists/> */}
-                  <Home/>
-                  <Footer/>
-              </Route>
+             
               <Route exact path="/newproducts" >
                   <Navbar/>
                   <Contact/>
