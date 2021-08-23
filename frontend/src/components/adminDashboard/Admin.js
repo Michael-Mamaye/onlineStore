@@ -1,26 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './style'
-import { Drawer } from '@material-ui/core';
+import { Drawer, Fab } from '@material-ui/core';
 import {Link,Route, withRouter} from 'react-router-dom'
 import Lists from '../pages/home/homeGrids/List';
-function Admin(props) {
-    const {history}=props
+import Addproduct  from './adminWorld/addProducts';
+import {Menu} from '@material-ui/icons'
+function Admin() {
+    const [open, setOpen]=useState(true)
+   
     const classes=styles();
-    const [comp,setComp]=React.useState('Add');
+    const [comp,setComp]=useState();
+
+    const handleDrawer=()=>{
+        setOpen(!open)
+    }
    function renderCom(){
        switch(comp){
            case "Add":
-               return 
+               return <div><Addproduct/></div>
             case "Delete":
+                return <div><Addproduct/></div>
+            default:
                 return 
-                
-                ;
        }
    }
     return (
         <div>
             {/*  */}
-            <Drawer open variant='persistent'>
+            <Fab style={{marginLeft:'100px',position:'absolute',marginLeft:'10px',left:'10px',zIndex:'-moz-initial'}}><Menu/></Fab>
+            <Drawer open={open} variant='persistent'>
                 <div className={classes.adminDiv}>
                     <div className={classes.adminDrawer}>
                         <ul className={classes.adminMenus}>
@@ -36,9 +44,9 @@ function Admin(props) {
                             <li className={classes.lists}  
                                onClick={()=>{setComp("Del")}}>
                                 PROFILE </li>
-                    </ul>
+                        </ul>
                     </div>
-                    <div className={classes.admincontent}>
+                    <div className={classes.adminContent}>
                             {renderCom()}
                     </div>
                 </div>
@@ -48,4 +56,4 @@ function Admin(props) {
 }
 
 
-export default withRouter(Admin);
+export default Admin;

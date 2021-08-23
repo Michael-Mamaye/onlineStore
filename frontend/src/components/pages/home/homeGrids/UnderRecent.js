@@ -17,7 +17,7 @@ function UnderRecent() {
              <div className="underRecentContainer">
                  <div data-aos="fade-up" className="underRecentGrid">
                     <span><LocalShippingOutlined className={classes.prop}/></span>
-                    <p className='underRecentTitle'>Support Customer</p>
+                    <p className='underRecentTitle'>Free Delivery</p>
                     <p className='underRecentNotes'>
                     Far far away, behind the word mountains,
                      far from the countries Vokalia and Consonantia, there live the blind texts.
@@ -26,7 +26,7 @@ function UnderRecent() {
               
                     <div data-aos="fade-up" className="underRecentGrid">
                         <span><PaymentOutlined className={classes.prop}/></span>
-                        <p className='underRecentTitle'>Support Customer</p>
+                        <p className='underRecentTitle'>Online Payment</p>
                         <p className='underRecentNotes'>
                         Far far away, behind the word mountains,
                          far from the countries Vokalia and Consonantia, there live the blind texts.

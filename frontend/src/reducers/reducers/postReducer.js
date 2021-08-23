@@ -5,14 +5,12 @@ const productReducer=(state=[],action)=>{
         {
             case GETPRODUCT:
                 return action.payload;
-                    console.log(action.payload)
-
             case ADDPRODUCT:
-                return action.payload;
+                return [...state,action.payload];
             case DELETEPRODUCT:
-                return state;
+                return state.filter((product)=>product._id!==action.payload._id);
             case UPDATEPRODUCT:
-                return action.payload;
+                return state.map((product)=>(product._id===action.payload._id ? action.payload : product));
             default:
                 return state;
         }

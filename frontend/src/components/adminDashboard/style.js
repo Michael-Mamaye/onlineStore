@@ -38,7 +38,14 @@ export default makeStyles ((theme)=>({
     links:{
         textDecoration:'none',
         color:'white'
-    } 
+    } ,
+    adminContent:{
+        alignItems:'center',
+        display:'flex',
+        flexDirection:'column',
+        maxHeight:'600px',
+        overflowY:'none'
 
+    }
 
 }))
