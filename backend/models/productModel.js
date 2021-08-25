@@ -9,20 +9,36 @@ const productSchema = new mongoose.Schema({
         type:String,
         default:'unknown'
     },
-    item:Number,
+    price:{
+        type:Number,
+        required:[true,'the price must be known for a product'],
+    },
+    shortDescription:{
+        type:String,
+        required:[true,'you should have a description about your product']
+    },
     quantity:{
         type:Number,
-        required:[true,'you should have to know how many products you have'],
-        default:10
-    },
-    description:{
-        type:String,
-        default:null
+        required:[true,'the quantity of the product should have to be known'],
+        default:5
     },
     detailDescription:{
         type:String,
         default:null
-    }
+    },
+    deliveryLocation:{
+        type:String,
+        default:null
+    },
+	storage:{
+        type:Number,
+        default:null
+    },
+	type:{
+        type:String,
+        default:null
+    },
+   
 })
 
 

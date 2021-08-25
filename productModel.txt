@@ -1,0 +1,15 @@
+product=
+{	_id:
+	name:{
+	    type:String,
+	    required:[true,'a product should have a name']
+	}
+	brand:
+	price:
+	deliveryLocation:
+	storage:
+	type:
+	shortDescription:
+	detailDescription:
+	quantity:
+}

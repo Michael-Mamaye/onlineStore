@@ -39,7 +39,8 @@ const Catagories=({product})=> {
                                     <CardMedia image={MK} style={{width:"100%", height:'50%'}}></CardMedia>
                                     <CardContent>
                                         <p className={classes.contentNames}>{data.name} </p>
-                                        <p className={classes.contentDescription}>{data.description}</p>
+                                        <p className={classes.contentDescription}>{data.storage} GB</p>
+                                        <p className={classes.contentDescription}>{data.shortDescription}</p>
                                     </CardContent>
                                     <CardActions className={classes.cardactions}>
                                         <Button className={classes.buyBtn}> Buy Now </Button>

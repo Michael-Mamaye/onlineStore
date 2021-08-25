@@ -1,7 +1,5 @@
 const Product =require('./../models/productModel')
 
-
-
 exports.getAllProducts= async (req,res)=>{
     try{
 
@@ -17,9 +15,6 @@ exports.getAllProducts= async (req,res)=>{
         //the above method adds $ sign infront of the matched item
 
         let manipulation= await Product.find(JSON.parse(queryStr))
-    
-       
-
         const product =await manipulation;
 
 

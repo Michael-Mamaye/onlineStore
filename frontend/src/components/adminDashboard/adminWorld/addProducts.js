@@ -6,8 +6,7 @@ function addProducts() {
     return (
         <div>
            <Container className={classes.addProductsDiv}>
-                <p>image</p>
-                <input  type='file'/>
+              
                 <p>name</p>
                 <input type='text'/>
                 <p>brand</p>
