@@ -10,7 +10,7 @@ export default makeStyles((theme)=>({
     },
     contentDescription:{
         textAlign:'left',
-        marginLeft:'10px',
+        marginLeft:'11px',
         fontFamily:"'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif",
         opacity:'0.85',
         fontSize:'14px',
