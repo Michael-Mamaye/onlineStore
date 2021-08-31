@@ -8,6 +8,7 @@ import Lists from './components/pages/lists/Lists';
 import Contact from './components/pages/contact/Contact';
 import Footer from './components/pages/footer/Footer';
 import Admin from './components/adminDashboard/Admin'
+import cartItems from './components/cartItem/cartItems';
 
 function App() {
   return (
@@ -23,6 +24,11 @@ function App() {
               <Route exact path="/about">
                   <Navbar/>
                   <About/>
+                  <Footer/>
+              </Route>
+              <Route exact path="/about">
+                  <Navbar/>
+                  <cartItems/>
                   <Footer/>
               </Route>
              

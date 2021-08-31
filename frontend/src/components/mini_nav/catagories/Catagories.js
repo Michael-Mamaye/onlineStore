@@ -18,7 +18,7 @@ const Catagories=({product})=> {
             {
                 miki=element;
             }
-        });
+        });  
         setSelectedItem(miki);
         setOpen(true);
     };
