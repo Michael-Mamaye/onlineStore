@@ -4,11 +4,11 @@ import Navbar from './components/Navigation/Navbar';
 import './App.css';
 import About from './components/pages/About/About'
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
-import Lists from './components/pages/lists/Lists';
+
 import Contact from './components/pages/contact/Contact';
 import Footer from './components/pages/footer/Footer';
 import Admin from './components/adminDashboard/Admin'
-import cartItems from './components/cartItem/cartItems';
+
 
 function App() {
   return (
