@@ -2,9 +2,9 @@ import React from 'react'
 import {Button } from '@material-ui/core'
 import useStyle from './style'
 import MiniNav from '../../mini_nav/Nav'
-import Recent from './homeGrids/Recent'
+import { Link } from 'react-router-dom'
 import "./home.css"
-import UnderRecent from './homeGrids/UnderRecent'
+import OurQuality from './homeGrids/OurQuality'
 import List from './homeGrids/List'
 
 
@@ -17,13 +17,12 @@ const Home=() =>{
         <div>
            <div className="homeBackground">
               <p className="bestDeals">Take Everything and Know How It Feels</p>
-              <Button className={`btn ${classes.btns}`}
+              <Link to='/register' style={{textDecoration:'none'}}><Button className={`btn ${classes.btns}`}
               
-              >Create Account</Button>
+              >Create Account</Button></Link>
            </div>
            <MiniNav/>
-           <Recent/>
-           <UnderRecent/>
+           <OurQuality/>
            <List/>
         </div>
     )
