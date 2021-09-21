@@ -9,6 +9,7 @@ const Login=()=>{
     const avatarStyle={backgroundColor:'#1bbd7e'}
     const btnstyle={margin:'8px 0'}
     return(
+        <div style={{paddingTop:'100px'}}>
         <Grid>
             <Paper elevation={10} style={paperStyle}>
                 <Grid align='center'>
@@ -39,6 +40,7 @@ const Login=()=>{
                 </Typography>
             </Paper>
         </Grid>
+        </div>
     )
 }
 export default Login

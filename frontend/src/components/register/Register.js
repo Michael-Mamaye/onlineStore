@@ -13,6 +13,7 @@ const Signup = () => {
     const avatarStyle = { backgroundColor: '#1bbd7e' }
     const marginTop = { marginTop: 5 }
     return (
+        <div style={{paddingTop:'100px'}}>
         <Grid>
             <Paper elevation={20} style={paperStyle}>
                 <Grid align='center'>
@@ -43,6 +44,7 @@ const Signup = () => {
                 </form>
             </Paper>
         </Grid>
+        </div>
     )
 }
 export default Signup;
