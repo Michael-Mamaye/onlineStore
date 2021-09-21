@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Login=()=>{
 
     const paperStyle={padding :20,height:'70vh',width:280, margin:"20px auto"}
-    const avatarStyle={backgroundColor:'#1bbd7e'}
+    const avatarStyle={backgroundColor:'rgba(131,66,12,.9)'}
     const btnstyle={margin:'8px 0'}
     return(
         <div style={{paddingTop:'100px'}}>
