@@ -3,7 +3,7 @@ import {LocalShippingOutlined,PaymentOutlined,ContactSupportOutlined} from '@mat
 import useStyles from './style'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import './underRecent.css'
+import './OurQuality.css'
 function UnderRecent() {
   const classes=useStyles()
   useEffect(()=>{ 
