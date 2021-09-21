@@ -8,6 +8,8 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom'
 import Contact from './components/pages/contact/Contact';
 import Footer from './components/pages/footer/Footer';
 import Admin from './components/adminDashboard/Admin'
+import Login from './components/login/Login';
+import Register from './components/register/Register';
 
 
 function App() {
@@ -19,6 +21,16 @@ function App() {
               <Route exact path="/" >
                   <Navbar/>
                   <Home/>
+                  <Footer/>
+              </Route>
+              <Route exact path="/login" >
+                  <Navbar/>
+                  <Login/>
+                  <Footer/>
+              </Route>
+              <Route exact path="/register" >
+                  <Navbar/>
+                  <Register/>
                   <Footer/>
               </Route>
               <Route exact path="/about">
